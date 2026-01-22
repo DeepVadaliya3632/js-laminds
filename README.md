@@ -400,3 +400,163 @@ console.log(func());
         <td>Yes</td>
     </tr>
 </table>
+
+<h1>JavaScript Loops</h1>
+
+<p>
+This document explains different types of loops in JavaScript:
+<code>for</code>, <code>while</code>, and <code>do...while</code>,
+with examples demonstrating increasing and decreasing conditions.
+</p>
+
+<hr>
+
+<h2>1. For Loop</h2>
+
+<p>
+The <code>for</code> loop is used when the number of iterations is known.
+</p>
+
+<h3>Example: Increasing Order</h3>
+
+<pre>
+for (let i = 0; i < 10; i++) {
+    console.log(i + 1);
+}
+</pre>
+
+<h3>Example: Decreasing Order</h3>
+
+<pre>
+for (let i = 10; i > 0; i--) {
+    console.log(i);
+}
+</pre>
+
+<hr>
+
+<h2>2. While Loop</h2>
+
+<p>
+The <code>while</code> loop runs as long as the condition is true.
+The condition is checked before execution.
+</p>
+
+<h3>Example: 1 to 10</h3>
+
+<pre>
+let i = 1;
+while (i <= 10) {
+    console.log(i);
+    i++;
+}
+</pre>
+
+<h3>Example: 50 to 21</h3>
+
+<pre>
+let k = 50;
+while (k > 20) {
+    console.log(k);
+    k--;
+}
+</pre>
+
+<h3>Example: 60 to 20</h3>
+
+<pre>
+let a = 60;
+while (a >= 20) {
+    console.log(a);
+    a--;
+}
+</pre>
+
+<h3>Example: 30 to 21</h3>
+
+<pre>
+let c = 30;
+while (c > 20) {
+    console.log(c);
+    c--;
+}
+</pre>
+
+<h3>Example: 50 to 60</h3>
+
+<pre>
+let f = 50;
+while (f <= 60) {
+    console.log(f);
+    f++;
+}
+</pre>
+
+<h3>Example using Pre-Increment</h3>
+
+<pre>
+let q = 50;
+while (q <= 60) {
+    console.log(q);
+    ++q;
+}
+</pre>
+
+<hr>
+
+<h2>3. Do While Loop</h2>
+
+<p>
+The <code>do...while</code> loop executes the block at least once,
+even if the condition is false.
+The condition is checked after execution.
+</p>
+
+<h3>Example: 10 to 20</h3>
+
+<pre>
+let g = 10;
+do {
+    console.log("do while:", g);
+    g++;
+} while (g <= 20);
+</pre>
+
+<h3>Example: 1 to 10</h3>
+
+<pre>
+let h = 1;
+do {
+    console.log("do while:", h);
+    h++;
+} while (h <= 10);
+</pre>
+
+<hr>
+
+<h2>Loop Comparison Summary</h2>
+
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <th>Loop Type</th>
+        <th>Condition Check</th>
+        <th>Minimum Execution</th>
+    </tr>
+    <tr>
+        <td>for</td>
+        <td>Before execution</td>
+        <td>0 times</td>
+    </tr>
+    <tr>
+        <td>while</td>
+        <td>Before execution</td>
+        <td>0 times</td>
+    </tr>
+    <tr>
+        <td>do...while</td>
+        <td>After execution</td>
+        <td>At least 1 time</td>
+    </tr>
+</table>
+
+<hr>
