@@ -53,11 +53,12 @@
 
 // Hosting Imapct
 // Hostong --> when your create a variable into js that break into two part first is declare part that go to up and there intialization part that go down
-var temp_d = 12;
+// var temp_d = 12;
+
 //var temp_d; --> undefined; --> that go to up
 // temp_d = 12; --> that go to down
 // if you use console.log before initialization that give you undefined;
-var temp_d_let = 24;
+// var temp_d_let = 24;
 // let variable not use before initialization
 // if you see console.log before initialization that give you error;
 // hoistinf imapct on var ,  let , const

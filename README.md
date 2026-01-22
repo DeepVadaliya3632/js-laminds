@@ -184,3 +184,219 @@ let temp_d_let = 24;
 const name = "deep";
 let count = 0;
 </pre>
+
+<h1>JavaScript Datatypes</h1>
+
+<p>
+This document explains JavaScript data types, including primitive and non-primitive types,
+with examples demonstrating value copying, reference copying, and type checking.
+</p>
+
+<hr>
+
+<h2>1. Primitive Data Types</h2>
+
+<p>
+Primitive data types store <strong>values directly</strong>.
+When assigned to another variable, the value is copied.
+</p>
+
+<h3>Example: Value Copy</h3>
+
+<pre>
+let a = 12;
+let b = a;
+
+console.log(a);
+a = 14;
+console.log(b);
+</pre>
+
+<p>
+Changing the value of <code>a</code> does not affect <code>b</code>
+because primitives are copied by value.
+</p>
+
+<hr>
+
+<h3>String</h3>
+
+<pre>
+let str  = 'hello world';
+let str1 = "hello world";
+let str2 = `hello world`;
+
+console.log(typeof(str));
+console.log(typeof(str1));
+console.log(typeof(str2));
+</pre>
+
+<p>
+All string formats return the type <code>string</code>.
+</p>
+
+<hr>
+
+<h3>Number</h3>
+
+<pre>
+let num = 12;
+let num1 = 12.25;
+
+console.log(typeof(num));
+console.log(typeof(num1));
+</pre>
+
+<p>
+JavaScript does not differentiate between integers and floats.
+Both are of type <code>number</code>.
+</p>
+
+<hr>
+
+<h3>Boolean</h3>
+
+<pre>
+let tr = true;
+let fs = false;
+
+console.log(typeof(tr));
+console.log(typeof(fs));
+</pre>
+
+<hr>
+
+<h3>Null</h3>
+
+<pre>
+let nul = null;
+console.log(typeof(null));
+</pre>
+
+<p>
+The type of <code>null</code> is <code>object</code>.
+This is a known JavaScript bug.
+</p>
+
+<hr>
+
+<h3>Undefined</h3>
+
+<pre>
+let undefined;
+console.log(typeof(undefined));
+</pre>
+
+<p>
+A variable declared but not assigned has the type <code>undefined</code>.
+</p>
+
+<hr>
+
+<h3>Symbol</h3>
+
+<pre>
+let obj = { uid: 1, name1: "deep", course: "BCA" };
+
+const u1 = Symbol("foo");
+const u2 = Symbol("foo");
+const u3 = Symbol("foo");
+
+obj[u3] = "001";
+
+if (u1 === u2) {
+    console.log("object");
+}
+</pre>
+
+<p>
+Each Symbol is unique, even if descriptions are the same.
+Symbols are often used as object keys to avoid conflicts.
+</p>
+
+<hr>
+
+<h3>BigInt</h3>
+
+<pre>
+let number = 9007199254740991;
+let number1 = 9007199254740991n;
+
+console.log(number1);
+</pre>
+
+<p>
+BigInt is used to represent numbers larger than the safe integer limit.
+</p>
+
+<hr>
+
+<h2>2. Non-Primitive Data Types</h2>
+
+<p>
+Non-primitive data types store <strong>references</strong>.
+Assigning them copies the reference, not the actual value.
+</p>
+
+<h3>Example: Reference Copy</h3>
+
+<pre>
+let arr = [1, 2, 3, 4, 54];
+let arr1 = arr;
+
+arr.pop();
+console.log(arr1);
+</pre>
+
+<p>
+Changes made to <code>arr</code> also affect <code>arr1</code>
+because both point to the same memory location.
+</p>
+
+<hr>
+
+<h2>3. Common Non-Primitive Types</h2>
+
+<pre>
+let arr = [1, 2, 54, 6, 3, 3, 43, 34];
+let object = { username: "deep", pass: "isd@#kdfhk935" };
+
+function func(params) {}
+
+console.log(arr);
+console.log(object);
+console.log(func());
+</pre>
+
+<ul>
+    <li>Array</li>
+    <li>Object</li>
+    <li>Function</li>
+</ul>
+
+<hr>
+
+<h2>Key Differences Summary</h2>
+
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <th>Category</th>
+        <th>Primitive</th>
+        <th>Non-Primitive</th>
+    </tr>
+    <tr>
+        <td>Storage</td>
+        <td>Stores value</td>
+        <td>Stores reference</td>
+    </tr>
+    <tr>
+        <td>Copy Behavior</td>
+        <td>By value</td>
+        <td>By reference</td>
+    </tr>
+    <tr>
+        <td>Mutable</td>
+        <td>No</td>
+        <td>Yes</td>
+    </tr>
+</table>
