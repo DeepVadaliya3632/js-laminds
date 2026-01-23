@@ -560,3 +560,278 @@ do {
 </table>
 
 <hr>
+
+<h1>JavaScript Functions</h1>
+
+<p>
+This document explains JavaScript functions, their purpose, syntax,
+types, parameters, and advanced concepts such as first-class functions
+and higher-order functions.
+</p>
+
+<hr>
+
+<h2>1. What is a Function</h2>
+
+<p>
+A function is a block of code that performs a specific task.
+</p>
+
+<h3>Why Functions are Used</h3>
+<ul>
+    <li>To reuse code</li>
+    <li>To avoid repetition</li>
+    <li>To make code modular and readable</li>
+</ul>
+
+<h3>How to Create a Function</h3>
+<ul>
+    <li>Function keyword</li>
+    <li>Function name</li>
+    <li>Parameters</li>
+    <li>Function body</li>
+    <li>Return statement (optional)</li>
+</ul>
+
+<hr>
+
+<h2>2. Types of Functions</h2>
+
+<h3>Function Declaration</h3>
+
+<pre>
+function abc() {
+}
+</pre>
+
+<p>
+Function declarations are hoisted and can be called before definition.
+</p>
+
+<hr>
+
+<h3>Function Expression</h3>
+
+<pre>
+let fnc = function () {
+};
+</pre>
+
+<p>
+Function expressions are stored in variables and are not hoisted.
+</p>
+
+<hr>
+
+<h3>Arrow Function (Fat Arrow Function)</h3>
+
+<pre>
+let fnc1 = () => {
+};
+</pre>
+
+<p>
+Arrow functions provide a shorter syntax and do not have their own
+<code>this</code> binding.
+</p>
+
+<hr>
+
+<h2>3. Function with Multiple Parameters</h2>
+
+<pre>
+let products = [];
+
+function cart(item, itemValue) {
+    products.push({
+        product: item,
+        price: itemValue
+    });
+}
+</pre>
+
+<hr>
+
+<h2>4. Arrow Function Example</h2>
+
+<pre>
+const cart = (item, itemValue) => {
+    products.push({
+        product: item,
+        price: itemValue
+    });
+};
+</pre>
+
+<hr>
+
+<h2>5. Function Expression Example</h2>
+
+<pre>
+const cart = function(item, itemValue) {
+    products.push({
+        product: item,
+        price: itemValue
+    });
+};
+</pre>
+
+<hr>
+
+<h2>6. Default Parameters</h2>
+
+<pre>
+function num(a = 10, b = 20) {
+    console.log(a, b);
+}
+
+num();
+</pre>
+
+<p>
+Default parameters are used when arguments are not passed.
+</p>
+
+<hr>
+
+<h2>7. Rest Parameters</h2>
+
+<pre>
+function def(a, b, c, ...args) {
+    console.log(a, b, c);
+    console.log(args);
+}
+
+def(1, 2, 3, 4, 5, 6, 778, 24, "text", null, true);
+</pre>
+
+<p>
+The rest operator collects multiple arguments into an array.
+</p>
+
+<hr>
+
+<h2>8. Early Return</h2>
+
+<pre>
+function getValue1(value) {
+    if (value < 25) return "Value is less than 25";
+    else if (value < 50) return "Value is less than 50";
+    else if (value < 75) return "Value is less than 75";
+    return "Value is 100 or more";
+}
+
+let result = getValue1(80);
+console.log(result);
+</pre>
+
+<p>
+Early return is used to exit a function as soon as a condition is met.
+</p>
+
+<hr>
+
+<h2>9. First-Class Functions</h2>
+
+<p>
+In JavaScript, functions are treated like variables.
+</p>
+
+<ul>
+    <li>Functions can be assigned to variables</li>
+    <li>Functions can be passed as arguments</li>
+    <li>Functions can be returned from other functions</li>
+</ul>
+
+<h3>Function Stored in a Variable</h3>
+
+<pre>
+const cart5 = function(product, price) {
+    console.log(`Adding ${product} at ${price}`);
+};
+
+cart5("S25 Ultra", 69000);
+</pre>
+
+<hr>
+
+<h3>Function Passed as Argument</h3>
+
+<pre>
+function temp_b(fnc) {
+    fnc();
+}
+
+temp_b(function () {
+    console.log("First Class Function");
+});
+</pre>
+
+<hr>
+
+<h3>Function Returning Another Function</h3>
+
+<pre>
+function abcd() {
+    return function () {
+        console.log("Function returned from another function");
+    };
+}
+
+abcd()();
+</pre>
+
+<hr>
+
+<h2>10. Higher Order Functions (HOF)</h2>
+
+<p>
+A higher-order function is a function that either:
+</p>
+
+<ul>
+    <li>Accepts another function as an argument</li>
+    <li>Returns a function</li>
+</ul>
+
+<h3>Example: Higher Order Function</h3>
+
+<pre>
+function greet(fn) {
+    fn();
+}
+
+greet(function () {
+    console.log("Hello World");
+});
+</pre>
+
+<hr>
+
+<h3>Example: forEach as Higher Order Function</h3>
+
+<pre>
+let arr = [10, 20, 30];
+
+arr.forEach(function (num) {
+    console.log(num);
+});
+</pre>
+
+<p>
+The <code>forEach</code> method is a built-in higher-order function
+because it accepts a function as an argument.
+</p>
+
+<hr>
+
+<h2>Conclusion</h2>
+
+<p>
+Functions are a core concept in JavaScript.
+Understanding different function types, parameters,
+first-class functions, and higher-order functions
+helps in writing clean, reusable, and efficient code.
+</p>
+
+<hr>
