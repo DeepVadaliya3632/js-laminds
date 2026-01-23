@@ -55,3 +55,125 @@
 // console.log("do while:",h);
 // h++;
 // } while (h <= 10) ;
+
+// let arr = ['apple', 'banana', 'cherry', 'kiwi', 34, 384, 2498, 23, 37, 247, 27]
+// for(let i of arr){
+//     if(i === 23){
+//         break
+//     }
+//     console.log(i)
+
+// }
+
+// let arr1 = ['apple', 'banana', 'cherry', 'kiwi', 34, 384, 2498, 23, 37, 247, 27]
+// for(let i of arr1){
+//     if(i === 23){
+//         continue
+//     }
+//     console.log(i)
+
+// }
+
+// example :1
+
+// for(let i = 1; i<=10;i++){
+//     console.log(i)
+// }
+
+// let het = 10;
+// while(het > 0){
+//     console.log(het)
+//     het--
+// }
+
+// for(i = 1; i <=20; i++){
+//     if(i % 2 == 0){
+//         console.log(i)
+//     }
+// }
+
+// let het2 = 1
+// while(het2 <=15){
+//     if(het2 % 2 != 0){
+//         console.log(het2)
+//     }
+//     het2++
+// }
+
+// for(let i = 1; i <= 10; i++){
+//     console.log(`5 * ${i} = ${5*i}`)
+// }
+
+// let sum = 0
+// for (let i = 1; i <= 100; i++) {
+//     sum += i;
+// }
+// console.log(sum)
+
+// let divideBy3 = []
+// for(let i = 1 ; i <= 50; i++) {
+//     if(i % 3 == 0){
+//         divideBy3.push(i)
+//     }
+// }
+// console.log(divideBy3)
+
+// let num = prompt("enter any number from 1: ");
+// for(let i = 1; i <= num; i++){
+//     if(i % 2 == 0){
+//         console.log(`${i} is even`)
+//     }
+//     else{
+//         console.log(`${i} is odd`)
+//     }
+// }
+
+// let divideBy3 = 0
+// let divideBy5 = 0
+// for(let i = 1 ; i <= 50; i++) {
+//     if(i % 3 == 0){
+//         divideBy3 += 1
+//     }
+//     if(i % 5 == 0){
+//         divideBy5 += 1
+//     }
+// }
+// console.log("Total num divide by 3: ",divideBy3)
+// console.log("Total num divide by 5: ",divideBy5)
+
+// for(let i =1;i<=100;i++){
+//     if(i % 7 === 0){
+//         break
+//     }
+//     console.log(i)
+// }
+
+// for(let i = 1; i<=20; i++) {
+//     if(i % 3 == 0){
+//         continue
+//     }
+//     console.log(i)
+// }
+
+// let oddCounter = 0
+// for(let i = 1; i<=100; i++){
+//     if(oddCounter === 5){
+//         break
+//     }
+//     if(i % 2 !== 0){
+//         console.log(i)
+//         oddCounter += 1
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
