@@ -824,14 +824,3 @@ because it accepts a function as an argument.
 </p>
 
 <hr>
-
-<h2>Conclusion</h2>
-
-<p>
-Functions are a core concept in JavaScript.
-Understanding different function types, parameters,
-first-class functions, and higher-order functions
-helps in writing clean, reusable, and efficient code.
-</p>
-
-<hr>
